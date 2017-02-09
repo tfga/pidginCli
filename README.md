@@ -20,7 +20,7 @@ Pidgin must be running.
 ```
 git clone https://github.com/tfga/pidginCli pidginCli
 cd pidginCli
-pip install .
+sudo pip install --upgrade .
 ```
 
 This will install 2 executables:
