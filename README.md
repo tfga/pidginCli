@@ -21,11 +21,31 @@ Pidgin must be running.
 
 ## Instalation
 
+1. Clone this repo
 ```
 git clone https://github.com/tfga/pidginCli pidginCli
 cd pidginCli
-sudo pip install --upgrade .
 ```
+
+2. Edit `src/PidginCli/conf.py`
+
+   Pidgin is multi-protocol and you can have multiple accounts, but for the time being, `pidginCli` supports only one domain. Sorry. If you need support for multiple domains, feel free to create an issue or a PR.
+
+   `domain` is everything that comes after `@` in your contacts. E.g. if your contacts are of the form
+
+   `someone@gmail.com`
+
+   then the contents of your `conf.py` should be:
+
+    ```
+    domain = 'gmail.com'
+    ```
+
+3. Install
+
+   ```
+   sudo pip install --upgrade .
+   ```
 
 This will install 2 executables:
 
