@@ -61,3 +61,10 @@ source <absolute path to pidginCli>/bash/bashCompletion
 ```
 
 If you don't want to keep the repo around, move `bash/bashCompletion` somewhere else and adjust the path accordingly.
+
+## How the completion works
+
+The completion takes into account both the username and full name. For instance, in the demo (above), the following completions take place:
+
+* `luciv => lucivaldo.costa`  -- username match
+* `bern  => thiago.almeida`   -- full name match ("Thiago  **Bernardes** de Almeida")
