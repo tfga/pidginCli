@@ -22,10 +22,10 @@ Pidgin must be running.
 ## Instalation
 
 1. Clone this repo
-```
-git clone https://github.com/tfga/pidginCli pidginCli
-cd pidginCli
-```
+   ```
+   git clone https://github.com/tfga/pidginCli pidginCli
+   cd pidginCli
+   ```
 
 2. Edit `src/PidginCli/conf.py`
 
