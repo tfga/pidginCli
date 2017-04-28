@@ -17,13 +17,21 @@ pidginMsg <buddy1> <buddy2> ...
 
 ## Requirements
 
-Pidgin must be running.
+1. `python-dbus`
+
+    On Ubuntu, this can be installed with:
+
+    ```
+    sudo apt-get install python-dbus
+    ```
+
+2. Pidgin must be running.
 
 ## Instalation
 
 1. Clone this repo
    ```
-   git clone https://github.com/tfga/pidginCli pidginCli
+   git clone https://github.com/tfga/pidginCli
    cd pidginCli
    ```
 
@@ -31,20 +39,20 @@ Pidgin must be running.
 
    Pidgin is multi-protocol and you can have multiple accounts, but for the time being, `pidginCli` supports only one domain. Sorry. If you need support for multiple domains, feel free to create an issue or a PR.
 
-   `domain` is everything that comes after `@` in your contacts. E.g. if your contacts are of the form
+   `domain` is everything that comes after `@` in your contacts. E.g. if your contacts are of the form:
 
    `someone@gmail.com`
 
    then the contents of your `conf.py` should be:
 
-    ```
-    domain = 'gmail.com'
-    ```
+   ```
+   domain = 'gmail.com'
+   ```
 
 3. Install
 
    ```
-   sudo pip install --upgrade .
+   sudo pip install .
    ```
 
 This will install 2 executables:
@@ -66,5 +74,13 @@ If you don't want to keep the repo around, move `bash/bashCompletion` somewhere 
 
 The completion takes into account both the username and full name. For instance, in the demo (above), the following completions take place:
 
-* `luciv => lucivaldo.costa`  -- username match
-* `bern  => thiago.almeida`   -- full name match ("Thiago  **Bernardes** de Almeida")
+* `luciv_ => lucivaldo.costa`  -- username match
+* `bern_  => thiago.almeida`   -- full name match ("Thiago  **Bernardes** de Almeida")
+
+where `_` is where the cursor was when I pressed `TAB`.
+
+## FAQ
+
+1. Is this thing interactive?
+
+   No. The use case is, e.g. when you want to send the output of some command to a co-worker without leaving the terminal.
