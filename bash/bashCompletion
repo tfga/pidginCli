@@ -1,0 +1,19 @@
+
+_pidginCompleteBuddyFn() {
+    
+#    (...) the
+#    second argument ($2) is the word being completed, and the third argument ($3) is the  word  preceding
+#    the word being completed on the current command line.  When it finishes, the possible completions are
+#    retrieved from the value of the COMPREPLY array variable.
+
+    
+    COMPREPLY=( $(_pidginCompleteBuddy "$2") )
+}
+
+complete -F _pidginCompleteBuddyFn pidginMsg
+complete -F _pidginCompleteBuddyFn p
+
+alias p='pidginMsg'
+
+#complete -W 'a b c' pidginMsg
+
