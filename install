@@ -1,1 +1,2 @@
-sudo python setup.py develop
+
+pip2 install .
