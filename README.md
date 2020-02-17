@@ -37,7 +37,7 @@ pidginMsg <buddy1> <buddy2> ...
 
 2. Edit `src/PidginCli/conf.py`
 
-   Pidgin is multi-protocol and you can have multiple accounts, but for the time being, `pidginCli` supports only one domain. Sorry. If you need support for multiple domains, feel free to create an issue or a PR.
+   Pidgin is multi-protocol and you can have multiple accounts, but for the time being, `pidginCli` supports only one domain. If you need support for multiple domains, feel free to create an issue or a PR.
 
    `domain` is everything that comes after `@` in your contacts. E.g. if your contacts are of the form:
 
@@ -51,8 +51,8 @@ pidginMsg <buddy1> <buddy2> ...
 
 3. Install
 
-   ```
-   sudo pip install .
+   ```sh
+   pip2 install .
    ```
 
 This will install 2 executables:
@@ -75,7 +75,7 @@ If you don't want to keep the repo around, move `bash/bashCompletion` somewhere 
 The completion takes into account both the username and full name. For instance, in the demo (above), the following completions take place:
 
 * `luciv_ => lucivaldo.costa`  -- username match
-* `bern_  => thiago.almeida`   -- full name match ("Thiago  **Bernardes** de Almeida")
+* `bern_  => thiago.almeida`   -- full name match ("Thiago  **Bern**ardes de Almeida")
 
 where `_` is where the cursor was when I pressed `TAB`.
 
