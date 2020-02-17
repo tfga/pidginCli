@@ -1,0 +1,13 @@
+
+#
+# Usage:
+# 
+#     ./runTests [nose extra args]
+# 
+# e.g.:
+# 
+#     ./runTests -v
+#     ./runTests -vv
+#
+
+PYTHONPATH=src nosetests "$@" test/*.py
