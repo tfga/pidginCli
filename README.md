@@ -3,7 +3,7 @@ Command line interface to [Pidgin](https://www.pidgin.im/) + bash completion
 
 ## Demo
 
-![Demo](https://i.imgur.com/cIUqiJJ.gif)
+[![screencast](https://img.youtube.com/vi/BBvfG0d-AxU/0.jpg)](https://youtu.be/BBvfG0d-AxU)
 
 ## Usage
 
