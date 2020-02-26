@@ -1,2 +1,33 @@
 
-pip2 install .
+
+venvCreate ()
+{
+    virtualenv --clear -p python2 --system-site-packages .venv
+}
+
+venvActivate ()
+{
+    . .venv/bin/activate
+}
+
+makeLink() {
+
+    ln -svf ".venv/bin/$1" "$2"
+}
+
+#####################################################################################
+## main
+
+venvCreate
+
+venvActivate
+
+pip install .
+
+echo
+
+makeLink _pidginCompleteBuddy ~/bin/
+
+makeLink pidginMsg ~/bin/
+makeLink pidginMsg ./run
+

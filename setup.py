@@ -17,6 +17,17 @@ setup(
     #     http://packages.python.org/distribute/setuptools.html#using-setuptools-without-bundling-it
     #
 
+    install_requires = [
+        
+       'docopt'
+       
+        # Test dependencies
+        # (isso deveria estar em tests_require, mas não funciona)
+      ,'pytest'
+#       ,'mock'
+    ],
+
+
     # 
     # Test dependencies
     # 

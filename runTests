@@ -1,8 +1,9 @@
+#!/usr/bin/env bash
 
 #
 # Usage:
 # 
-#     ./runTests [nose extra args]
+#     ./runTests [pytest extra args]
 # 
 # e.g.:
 # 
@@ -10,4 +11,6 @@
 #     ./runTests -vv
 #
 
-PYTHONPATH=src nosetests "$@" test/*.py
+. .venv/bin/activate
+
+PYTHONPATH=src pytest "$@" test/*.py
