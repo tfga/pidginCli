@@ -1,3 +1,4 @@
 # encoding: utf-8
 
-domain = 'mpdft.gov.br'
+# `domain` is everything that comes after `@` in your contacts.
+domain = 'gmail.com'

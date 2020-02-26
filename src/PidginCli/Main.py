@@ -2,7 +2,6 @@
 
 import sys
 from PidginCli.send import send
-from tfga.launchEditor import launchEditor
 from PidginCli.ArgParser import getOpts
 from PidginCli.conf import domain
 
