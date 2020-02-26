@@ -1,4 +1,9 @@
+#!/usr/bin/env bash
 
+
+INSTALL_DIR="$HOME/.local/bin/"
+
+#####################################################################################
 
 venvCreate ()
 {
@@ -31,8 +36,7 @@ pip install .
 
 echo
 
-makeLink _pidginCompleteBuddy ~/bin/
+makeLink _pidginCompleteBuddy "$INSTALL_DIR"
 
-makeLink pidginMsg ~/bin/
+makeLink pidginMsg "$INSTALL_DIR"
 makeLink pidginMsg ./run
-
