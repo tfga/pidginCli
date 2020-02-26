@@ -11,7 +11,7 @@ Command line interface to [Pidgin](https://www.pidgin.im/) + bash completion
 # Reads message from stdin
 echo "My message" | pidginMsg <buddy1> <buddy2> ...
 
-# Opens $EDITOR
+# Just opens the chat window
 pidginMsg <buddy1> <buddy2> ...
 ```
 
@@ -37,7 +37,7 @@ pidginMsg <buddy1> <buddy2> ...
 
 2. Edit `src/PidginCli/conf.py`
 
-   Pidgin is multi-protocol and you can have multiple accounts, but for the time being, `pidginCli` supports only one domain. If you need support for multiple domains, feel free to create an issue or a PR.
+   Pidgin is multi-protocol and you can have multiple accounts but, for the time being, `pidginCli` supports only one domain.
 
    `domain` is everything that comes after `@` in your contacts. E.g. if your contacts are of the form:
 
@@ -51,14 +51,27 @@ pidginMsg <buddy1> <buddy2> ...
 
 3. Install
 
-   ```sh
-   pip2 install .
-   ```
+    * Without virtualenv:
 
-This will install 2 executables:
+      ```sh
+      pip2 install .
+      ```
+
+    * With virtualenv:
+
+      1. Edit the `install` script and change the value of  `INSTALL_DIR` to point to the directory where the executables should be installed. This directory should be in your `$PATH`.
+
+      2. Run:
+
+         ```sh
+         ./install
+         ```
+
+4. Now you should have two new executables on your PATH:
 
   * `pidginMsg`: the main executable
   * `_pidginCompleteBuddy`: used by the bash completion
+
 
 ### Shell completion
 
