@@ -10,9 +10,14 @@ venvActivate ()
     . .venv/bin/activate
 }
 
+absPath() {
+
+    readlink -f "$@"
+}
+
 makeLink() {
 
-    ln -svf ".venv/bin/$1" "$2"
+    ln -svf "$(absPath .venv)/bin/$1" "$2"
 }
 
 #####################################################################################
