@@ -35,21 +35,7 @@ pidginMsg <buddy1> <buddy2> ...
    cd pidginCli
    ```
 
-2. Edit `src/PidginCli/conf.py`
-
-   Pidgin is multi-protocol and you can have multiple accounts but, for the time being, `pidginCli` supports only one domain.
-
-   `domain` is everything that comes after `@` in your contacts. E.g. if your contacts are of the form:
-
-   `someone@gmail.com`
-
-   then the contents of your `conf.py` should be:
-
-   ```
-   domain = 'gmail.com'
-   ```
-
-3. Install
+1. Install
 
     * Without virtualenv:
 
@@ -67,7 +53,7 @@ pidginMsg <buddy1> <buddy2> ...
          ./install
          ```
 
-4. Now you should have two new executables on your PATH:
+1. Now you should have two new executables on your PATH:
 
   * `pidginMsg`: the main executable
   * `_pidginCompleteBuddy`: used by the bash completion
