@@ -36,4 +36,4 @@ def getBuddyCompletions(pattern):
     
     buddies = getBuddy(pattern)
     
-    return [str(getBuddyLogin(b)) for b in buddies]
+    return [str(getAccountName(b)) for b in buddies]

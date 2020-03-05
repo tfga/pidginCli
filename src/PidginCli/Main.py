@@ -3,7 +3,6 @@
 import sys
 from PidginCli.send import send
 from PidginCli.ArgParser import getOpts
-from PidginCli.conf import domain
 
 
 
@@ -15,17 +14,11 @@ def readFromStdin():
     return msg
 
 
-
-def addDomain(u):
-    
-    return '{}@{}'.format(u, domain)
-
 def main(argv):
     
     opts = getOpts(argv)
     
     users = opts['<buddy>']
-    users = [addDomain(u) for u in users]
     
     if not sys.stdin.isatty():
     
