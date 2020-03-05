@@ -4,7 +4,6 @@ import gtk
 from PidginCli.buddies import getBuddy, getAllBuddies, getBuddyLogin,\
     getFullName
 from PidginCli.Util import containsInsensitive
-from PidginCli.Main import addDomain
 from PidginCli.send import send
 import keybinder
 import itertools
@@ -77,7 +76,7 @@ def chat():
 
 def chatWith(buddyLogin):
     
-    send('', addDomain(buddyLogin))
+    send('', buddyLogin)
 
 
 def matchingBuddies(text):
