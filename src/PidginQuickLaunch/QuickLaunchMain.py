@@ -246,6 +246,9 @@ def newListBox():
 #         font = pango.FontDescription('Monospace 10')
 #         renderer.set_property('font-desc', font)
 
+    # No header
+    listBox.set_headers_visible(False)
+
     # Add column using our renderer
     col = gtk.TreeViewColumn(None, renderer, text = 0)
     
