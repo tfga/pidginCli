@@ -36,7 +36,6 @@ pip install .
 
 echo
 
-makeLink _pidginCompleteBuddy "$INSTALL_DIR"
-
-makeLink pidginMsg "$INSTALL_DIR"
-makeLink pidginMsg ./run
+makeLink _pidginCompleteBuddy   "$INSTALL_DIR"
+makeLink pidginMsg              "$INSTALL_DIR"
+makeLink pidginQuickLaunch      "$INSTALL_DIR"

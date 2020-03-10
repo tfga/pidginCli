@@ -1,0 +1,6 @@
+
+
+. .venv/bin/activate
+
+PYTHONPATH=src python src/PidginQuickLaunch/QuickLaunchMain.py "$@"
+
