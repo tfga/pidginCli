@@ -83,3 +83,30 @@ where `_` is where the cursor was when I pressed `TAB`.
 1. Is this thing interactive?
 
    No. The use case is, e.g. when you want to send the output of some command to a co-worker without leaving the terminal.
+
+
+# PidginQuickLaunch
+
+Actually... there's a _second_ application hidden in this repo. :raised_eyebrow:
+
+The attentive user will certainly have noticed that after the installation, a third executable is also present:
+
+  `pidginQuickLaunch`
+
+_Hum... what might that be?_  :thinking:
+
+It's a GUI version of `pidginMsg`.
+
+:exploding_head:
+
+## Installation
+
+If you want to use this, you must also install `python-keybinder` and `python-gtk2`:
+
+```sh
+sudo apt-get install python-keybinder python-gtk2
+```
+
+## Shortcuts
+
+Once the application is running, the GUI can be summoned with the (global) shortcut `Ctrl + Alt + m`. And dismissed with `Esc`.
