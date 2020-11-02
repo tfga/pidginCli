@@ -7,7 +7,9 @@ INSTALL_DIR="$HOME/.local/bin/"
 
 venvCreate ()
 {
-    virtualenv --clear -p python2 --system-site-packages .venv
+    local interpreter="$1"
+
+    virtualenv --clear -p "$interpreter" --system-site-packages .venv
 }
 
 venvActivate ()
@@ -28,7 +30,9 @@ makeLink() {
 #####################################################################################
 ## main
 
-venvCreate
+interpreter="${1-python2}"
+
+venvCreate "$interpreter"
 
 venvActivate
 
