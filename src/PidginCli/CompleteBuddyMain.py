@@ -9,7 +9,7 @@ def main(argv):
     
     pattern = argv[0]
     
-    print ' '.join(getBuddyCompletions(pattern))
+    print(' '.join(getBuddyCompletions(pattern)))
     
     
 

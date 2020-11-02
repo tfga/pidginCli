@@ -119,7 +119,7 @@ ESC    = gtk.gdk.keyval_from_name('Escape')  # @UndefinedVariable
 
 def onKeyPress(widget, event):
     
-    print event, event.keyval, event.state # & gtk.gdk.CONTROL_MASK:
+    print(event, event.keyval, event.state) # & gtk.gdk.CONTROL_MASK:
     
     key = event.keyval
     
@@ -163,7 +163,7 @@ def newEntry():
 
     def onChange(widget):
         
-        print widget, 'changed!!!'
+        print(widget, 'changed!!!')
 
 #        global i    # DEBUG
 #        i = 0
@@ -203,7 +203,7 @@ def globalShortcut(window):
     
 #     mergeKey = '<Super>p'  # TODO
     mergeKey = "<Ctrl><Alt>m"
-    print 'Binding shortcut %s to PidginQuickLaunch' % mergeKey
+    print('Binding shortcut %s to PidginQuickLaunch' % mergeKey)
     keybinder.bind(mergeKey, on_show_keyboard_shortcut)
     
 
