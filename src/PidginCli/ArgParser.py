@@ -9,7 +9,7 @@ def main():
     
     args = getOpts(sys.argv[1:])
     
-    print args
+    print(args)
     
     
 def getOpts(args):
