@@ -19,11 +19,10 @@ pidginMsg <buddy1> <buddy2> ...
 
 1. `python-dbus`
 
-    On Ubuntu, this can be installed with:
-
-    ```
-    sudo apt-get install python-dbus
-    ```
+    Distro    | Command line
+    ----------|---------
+    Ubuntu    | `sudo apt-get install python-dbus`
+    Fedora    | `dnf install python3-dbus`
 
 2. Pidgin must be running.
 
@@ -37,21 +36,31 @@ pidginMsg <buddy1> <buddy2> ...
 
 1. Install
 
-    * Without virtualenv:
+    * Ubuntu
+
+      * Without virtualenv:
+
+        ```sh
+        pip2 install .
+        ```
+
+      * With virtualenv:
+
+        1. Edit the `install` script and change the value of  `INSTALL_DIR` to point to the directory where the executables should be installed. This directory should be in your `$PATH`.
+
+        2. Run:
+
+           ```sh
+           ./install
+           ```
+
+    * Fedora
+
+      Fedora has `dbus` bindings for Python 3 only. So, you should do instead:
 
       ```sh
-      pip2 install .
+      ./install python3
       ```
-
-    * With virtualenv:
-
-      1. Edit the `install` script and change the value of  `INSTALL_DIR` to point to the directory where the executables should be installed. This directory should be in your `$PATH`.
-
-      2. Run:
-
-         ```sh
-         ./install
-         ```
 
 1. Now you should have two new executables on your PATH:
 
@@ -84,10 +93,13 @@ where `_` is where the cursor was when I pressed `TAB`.
 
    No. The use case is, e.g. when you want to send the output of some command to a co-worker without leaving the terminal.
 
+---
 
 # PidginQuickLaunch
 
-Actually... there's a _second_ application hidden in this repo. :raised_eyebrow:
+Actually... there's a _second_ application hidden in this repo. 
+
+:raised_eyebrow:
 
 The attentive user will certainly have noticed that after the installation, a third executable is also present:
 
@@ -106,6 +118,14 @@ If you want to use this, you must also install `python-keybinder` and `python-gt
 ```sh
 sudo apt-get install python-keybinder python-gtk2
 ```
+
+<details>
+  <summary>Fedora</summary>
+
+  Sorry, this part is python 2 only. And the migration to python 3 also implies a migration from [PyGtk to GObject Introspection](https://askubuntu.com/a/97107). So... it probably won't happen anytime soon.
+
+  That said, this is a small amount of code and, with [pygtkcompat](https://wiki.gnome.org/Projects/PyGObject/PyGTKCompat), it might be possible to make it work with both. If anyone out there is willing to do the work, PRs will be wellcome.
+</details>
 
 ## Shortcuts
 
