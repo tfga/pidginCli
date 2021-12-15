@@ -16,14 +16,16 @@ def getOpts(args):
     
     doc = """
 Usage:
-    pidginMsg <buddy>...
+    pidginMsg [<account>:]<buddy>...
     
     # Reads message from stdin
-    echo "My message" | pidginMsg <buddy1> <buddy2> ...
+    echo "My message" | pidginMsg [<account1>:]<buddy1> [<account2>:]<buddy2> ...
     
     # Opens chat windows
-    pidginMsg <buddy1> <buddy2> ...
- 
+    pidginMsg [<account1>:]<buddy1> [<account1>:]<buddy2> ...
+
+    # <account> is optional, if not specified first account will be used when using multiple accounts and warning will be shown.
+
 Options:
   -h --help                     Shows this screen.
 """
