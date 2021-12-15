@@ -22,6 +22,8 @@ def getPurple():
 
 def getAccount(purple):
     
+    allAccounts = {}
+
     # Find account
     accounts = purple.PurpleAccountsGetAllActive()
     lenAccounts = len(accounts)
@@ -31,20 +33,22 @@ def getAccount(purple):
         
         raise Exception('No accounts found.')
     
-    elif lenAccounts > 1:
+    else:
         
-        print('WARNING: More than one account found. Using the first one.')
+        if lenAccounts > 1:
+            print('WARNING: More than one account found. Using the first one if not specified.')
         
         for a in accounts:
         
-            print(a, purple.PurpleAccountGetUsername(a))
+            allAccounts[purple.PurpleAccountGetUsername(a)] = a
+
+            if lenAccounts > 1:
+                print(a, purple.PurpleAccountGetUsername(a))
             
     
-    return accounts[0]
+    return allAccounts
     
     
-
-
-# Globais
+# Globals
 purple = getPurple()
 account = getAccount(purple)
